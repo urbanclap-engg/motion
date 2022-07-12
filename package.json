@@ -18,11 +18,11 @@
     "lib"
   ],
   "scripts": {
-    "lint": "tsc --noEmit && eslint --ext .js,.jsx,.ts,.tsx ./",
-    "prettier:write": "npx prettier --write **/*.{js,jsx,ts,tsx,json} && npx prettier --write *.{js,jsx,ts,tsx,json}",
+    "lint": "eslint \"src/**\" --cache --cache-location \"./.eslint/cache/\" -f json -o ./.eslint/output/output.json",
+    "lint-fix": "eslint \"src/**\" --fix",
     "build": "tsc",
     "test": "echo \"Test motion\"",
-    "prepublish": "npm run build"
+    "build-dev": "npm run build"
   },
   "peerDependencies": {
     "react-native": "0.66.0",
