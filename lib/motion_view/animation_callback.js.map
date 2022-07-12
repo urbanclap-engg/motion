@@ -1,0 +1,1 @@
+{"version":3,"file":"animation_callback.js","sourceRoot":"","sources":["../../src/motion_view/animation_callback.ts"],"names":[],"mappings":";;;AAAA,MAAM,mBAAmB,GAAG,CAC3B,UAAoB,EACpB,kBAA6B,EAC7B,gBAA2B,EAC1B,EAAE;IACH,IAAI,UAAU,EAAE;QACf,IAAI,kBAAkB;YAAE,kBAAkB,EAAE,CAAC;KAC7C;SAAM,IAAI,gBAAgB;QAAE,gBAAgB,EAAE,CAAC;AACjD,CAAC,CAAC;AAEO,kDAAmB"}
