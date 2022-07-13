@@ -1,4 +1,4 @@
-import { Extrapolate, interpolate } from 'react-native-reanimated';
+import { interpolate } from 'react-native-reanimated';
 import {
 	InterPolationArrays,
 	InterpolationProps,
@@ -90,6 +90,7 @@ const getInterpolationArrays = (
 				inputArray.push(interpolationConfigItem.endInputOffset);
 				outputArray.push(interpolationConfigItem.toValue);
 			}
+			return undefined;
 		},
 	);
 
@@ -100,7 +101,7 @@ const getInterpolationArrays = (
 	};
 };
 
-const PositionBasedAnimationModifier = (
+const positionBasedAnimationModifier = (
 	animationProps: ParsedPositionBasedAnimationProps[],
 	totalDuration: number,
 	xArr: InterpolationProps[],
@@ -125,6 +126,7 @@ const PositionBasedAnimationModifier = (
 					);
 					yArrItem ? yArr.push(yArrItem) : null;
 				}
+				return undefined;
 			},
 		);
 	}
@@ -151,15 +153,16 @@ const getInterPolationConfig = (
 				opacityPropsItem,
 			);
 			opacityArrItem ? opacityArr.push(opacityArrItem) : null;
+			return undefined;
 		});
 	}
-	PositionBasedAnimationModifier(
+	positionBasedAnimationModifier(
 		slideAnimationProps,
 		totalDuration,
 		slideXArr,
 		slideYArr,
 	);
-	PositionBasedAnimationModifier(
+	positionBasedAnimationModifier(
 		scaleAnimationProps,
 		totalDuration,
 		scaleXArr,

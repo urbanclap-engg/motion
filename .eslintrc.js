@@ -1,6 +1,31 @@
 module.exports = {
-	extends: ['@uc/uc-base', '@uc/uc-orion-base'],
-	rules: {
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    },
+    rules: {
 		'@uc/uc/file-name': 'off',
 		'@uc/uc/case': 'off',
 		'object-curly-spacing': 'off',
@@ -10,21 +35,20 @@ module.exports = {
 		'key-spacing': 'off',
 		'@typescript-eslint/semi': 'off',
 		'react/function-component-definition': 'off',
+        "react/jsx-filename-extension": ["warn", { "extensions": [".tsx",] }],
+		'@typescript-eslint/ban-ts-comment': 'off',
+		'react/jsx-no-useless-fragment': 'off',
 		// Below Rules will sonn be moved to error severity
 		'@typescript-eslint/ban-types': 'warn',
 		'react/no-unused-class-component-methods': 'warn',
 		'eqeqeq': 'warn',
 		'default-param-last': 'warn',
 		'react/jsx-no-constructed-context-values': 'warn',
-		'@typescript-eslint/ban-ts-comment': 'warn',
-		'react/jsx-no-useless-fragment': 'warn',
 		'camelcase': 'warn',
 		'react/no-unstable-nested-components': 'warn',
 		'react/destructuring-assignment': 'warn',
-		'import/no-named-as-default': 'warn',
 		'react/require-default-props': 'warn',
 		'react/no-unused-prop-types': 'warn',
-		'no-unused-expressions': ['warn', { 'allowShortCircuit': true, 'allowTernary': true }],
 		'no-param-reassign': 'warn',
 		'@typescript-eslint/no-empty-function': 'warn',
 		'no-restricted-syntax': 'warn',
@@ -35,10 +59,8 @@ module.exports = {
 		'default-case': 'warn',
 		'react/no-array-index-key': 'warn',
 		'no-plusplus': 'warn',
-		'import/export': 'warn',
 		'consistent-return': 'warn',
 		'no-return-await': 'warn',
-		'import/no-mutable-exports': 'warn',
 		'class-methods-use-this': 'warn',
 		'new-cap': 'warn',
 		'@typescript-eslint/no-use-before-define': 'warn',

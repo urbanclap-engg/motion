@@ -6,7 +6,6 @@ lib
 .DS_Store
 yarn.lock
 yarn-error.log
-.prettierrc
 .vscode
 coverage
 .jest
