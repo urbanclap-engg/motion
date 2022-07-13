@@ -18,7 +18,7 @@
     "lib"
   ],
   "scripts": {
-    "build": "tsc --project .tsconfig.json",
+    "build": "tsc",
     "lint": "eslint \"src/**\" --cache --cache-location \"./.eslint/cache/\" -f json -o ./.eslint/output/output.json",
     "lint-fix": "eslint \"src/**\" --fix",
     "lint-quiet": "eslint \"src/**\" --quiet",
