@@ -1,7 +1,7 @@
 const onAnimationComplete = (
 	isFinished?: boolean,
-	onAnimationSuccess?: Function,
-	onAnimationBreak?: Function,
+	onAnimationSuccess?: any,
+	onAnimationBreak?: any,
 ) => {
 	if (isFinished) {
 		if (onAnimationSuccess) onAnimationSuccess();

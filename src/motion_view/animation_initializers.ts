@@ -1,4 +1,4 @@
-import Animated, {
+import {
 	withDelay,
 	withRepeat,
 	withTiming,
@@ -32,10 +32,7 @@ const getRepeatCount = (repeatProps?: RepeatProps) => {
 	return undefined;
 };
 
-const SpringAnimationFn = (
-	springProps: SpringProps,
-	animationInitProps: AnimationInitProps,
-) => {
+const springAnimationFn = (springProps: SpringProps,animationInitProps: AnimationInitProps) => {
 	const {
 		visibilityOffset,
 		setViewHidden,
@@ -75,7 +72,7 @@ const SpringAnimationFn = (
 	);
 };
 
-const RepeatAnimateFn = (
+const repeatAnimateFn = (
 	repeatProps: RepeatProps,
 	animationInitProps: AnimationInitProps,
 	easingValues: EasingValues,
@@ -172,13 +169,18 @@ const triggerAnimation = (
 				easingValues || DEFAULT_EASING_VALUES,
 			);
 		case AnimationStrategy.SPRING:
-			return SpringAnimationFn(
+			return springAnimationFn(
 				springProps || DEFAULT_SPRING_PROPS,
 				animationInitProps,
 			);
 		case AnimationStrategy.REPEAT:
-			return RepeatAnimateFn(
+			return repeatAnimateFn(
 				repeatProps || DEFAULT_REPEAT_PROPS,
+				animationInitProps,
+				easingValues || DEFAULT_EASING_VALUES,
+			);
+		default: 
+			return animateFn(
 				animationInitProps,
 				easingValues || DEFAULT_EASING_VALUES,
 			);

@@ -63,6 +63,7 @@ const configParser = (
 				animationArrayObject.x || animationArrayObject.y
 					? animationArray.push(animationArrayObject)
 					: undefined;
+				return undefined;
 			},
 		);
 	}
@@ -89,6 +90,7 @@ const getParsedConfig = (
 	if (opacityProps) {
 		opacityProps.map((opacityPropsItem: CommonAnimationProps) => {
 			opacityArr.push(configModifier(opacityPropsItem));
+			return undefined;
 		});
 	}
 
