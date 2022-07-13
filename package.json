@@ -18,7 +18,7 @@
     "lib"
   ],
   "scripts": {
-    "lint": "eslint \"src/**\"",
+    "lint": "eslint \"src/**\" --cache --cache-location \"./.eslint/cache/\" -f json -o ./.eslint/output/output.json",
     "lint-fix": "eslint \"src/**\" --fix",
     "lint-quiet": "eslint \"src/**\" --quiet",
     "build": "tsc",
@@ -81,5 +81,10 @@
   },
   "engines": {
     "node": ">=14.18.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run lint"
+    }
   }
 }
