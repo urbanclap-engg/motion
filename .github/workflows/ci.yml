@@ -34,7 +34,8 @@ jobs:
 
       - name: yarn install
         run: |
-          yarn install
+          rm -rf lib,
+          npm ci
 
       - name: yarn lint
         run: |
