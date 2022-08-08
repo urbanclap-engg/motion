@@ -1,4 +1,4 @@
-import {
+import Animated, {
 	withDelay,
 	withRepeat,
 	withTiming,
@@ -8,13 +8,6 @@ import {
 } from 'react-native-reanimated';
 import { onAnimationComplete } from './animation_callback';
 import {
-	DEFAULT_EASING_VALUES,
-	DEFAULT_REPEAT_PROPS,
-	DEFAULT_SPRING_PROPS,
-} from './constants';
-import { AnimationStrategy } from './enums';
-import {
-	AnimationBasedProps,
 	AnimationInitProps,
 	EasingValues,
 	RepeatProps,
@@ -32,7 +25,39 @@ const getRepeatCount = (repeatProps?: RepeatProps) => {
 	return undefined;
 };
 
-const springAnimationFn = (springProps: SpringProps,animationInitProps: AnimationInitProps) => {
+const postAnimationCallback = (
+	booleans: {
+		isFinished?: boolean;
+		hideViewPostAnimation: boolean;
+	},
+	visibilityOffset: Animated.SharedValue<number>,
+	callbacks: {
+		setViewHidden: (hidden: boolean) => void;
+		onAnimationSuccess?: () => void;
+		onAnimationBreak?: () => void;
+	},
+) => {
+	console.log(
+		runOnJS,
+		runOnJS(() => {}),
+	);
+	const { isFinished, hideViewPostAnimation } = booleans;
+	const { setViewHidden, onAnimationSuccess, onAnimationBreak } = callbacks;
+	if (isFinished && hideViewPostAnimation) {
+		visibilityOffset.value = 0;
+		runOnJS(setViewHidden)(true);
+	}
+	runOnJS(onAnimationComplete)(
+		isFinished,
+		onAnimationSuccess,
+		onAnimationBreak,
+	);
+};
+
+const SpringAnimationFn = (
+	springProps: SpringProps,
+	animationInitProps: AnimationInitProps,
+) => {
 	const {
 		visibilityOffset,
 		setViewHidden,
@@ -59,20 +84,16 @@ const springAnimationFn = (springProps: SpringProps,animationInitProps: Animatio
 			restSpeedThreshold,
 		},
 		(isFinished) => {
-			if (isFinished && hideViewPostAnimation) {
-				visibilityOffset.value = 0;
-				runOnJS(setViewHidden)(true);
-			}
-			runOnJS(onAnimationComplete)(
-				isFinished,
-				onAnimationSuccess,
-				onAnimationBreak,
+			postAnimationCallback(
+				{ isFinished, hideViewPostAnimation },
+				visibilityOffset,
+				{ setViewHidden, onAnimationSuccess, onAnimationBreak },
 			);
 		},
 	);
 };
 
-const repeatAnimateFn = (
+const RepeatAnimateFn = (
 	repeatProps: RepeatProps,
 	animationInitProps: AnimationInitProps,
 	easingValues: EasingValues,
@@ -101,14 +122,10 @@ const repeatAnimateFn = (
 			repeatCount,
 			reverseOnRepeat,
 			(isFinished) => {
-				if (isFinished && hideViewPostAnimation) {
-					visibilityOffset.value = 0;
-					runOnJS(setViewHidden)(true);
-				}
-				runOnJS(onAnimationComplete)(
-					isFinished,
-					onAnimationSuccess,
-					onAnimationBreak,
+				postAnimationCallback(
+					{ isFinished, hideViewPostAnimation },
+					visibilityOffset,
+					{ setViewHidden, onAnimationSuccess, onAnimationBreak },
 				);
 			},
 		),
@@ -142,49 +159,20 @@ const animateFn = (
 				),
 			},
 			(isFinished) => {
-				if (isFinished && hideViewPostAnimation) {
-					visibilityOffset.value = 0;
-					runOnJS(setViewHidden)(true);
-				}
-				runOnJS(onAnimationComplete)(
-					isFinished,
-					onAnimationSuccess,
-					onAnimationBreak,
+				postAnimationCallback(
+					{ isFinished, hideViewPostAnimation },
+					visibilityOffset,
+					{ setViewHidden, onAnimationSuccess, onAnimationBreak },
 				);
 			},
 		),
 	);
 };
 
-const triggerAnimation = (
-	animationStrategy: AnimationStrategy,
-	animationInitProps: AnimationInitProps,
-	animationProps: AnimationBasedProps,
-): any => {
-	const { easingValues, repeatProps, springProps } = animationProps;
-	switch (animationStrategy) {
-		case AnimationStrategy.REGULAR:
-			return animateFn(
-				animationInitProps,
-				easingValues || DEFAULT_EASING_VALUES,
-			);
-		case AnimationStrategy.SPRING:
-			return springAnimationFn(
-				springProps || DEFAULT_SPRING_PROPS,
-				animationInitProps,
-			);
-		case AnimationStrategy.REPEAT:
-			return repeatAnimateFn(
-				repeatProps || DEFAULT_REPEAT_PROPS,
-				animationInitProps,
-				easingValues || DEFAULT_EASING_VALUES,
-			);
-		default: 
-			return animateFn(
-				animationInitProps,
-				easingValues || DEFAULT_EASING_VALUES,
-			);
-	}
+export {
+	getRepeatCount,
+	postAnimationCallback,
+	SpringAnimationFn,
+	RepeatAnimateFn,
+	animateFn,
 };
-
-export { triggerAnimation };

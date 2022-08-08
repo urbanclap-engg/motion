@@ -1,9 +1,4 @@
-import {
-	AnimationBasedProps,
-	EasingValues,
-	RepeatProps,
-	SpringProps,
-} from './types';
+import { EasingValues, RepeatProps, SpringProps } from './types';
 
 const DEFAULT_TOTAL_DURATION = 1000;
 const DEFAULT_DELAY = 0;
@@ -30,11 +25,6 @@ const DEFAULT_SPRING_PROPS: SpringProps = {
 	restDisplacementThreshold: 0.01,
 	restSpeedThreshold: 2,
 };
-const DEFAULT_ANIMATION_BASED_PROPS: AnimationBasedProps = {
-	easingValues: DEFAULT_EASING_VALUES,
-	repeatProps: DEFAULT_REPEAT_PROPS,
-	springProps: DEFAULT_SPRING_PROPS,
-};
 
 export {
 	DEFAULT_TOTAL_DURATION,
@@ -46,5 +36,4 @@ export {
 	DEFAULT_EASING_VALUES,
 	DEFAULT_REPEAT_PROPS,
 	DEFAULT_SPRING_PROPS,
-	DEFAULT_ANIMATION_BASED_PROPS
 };

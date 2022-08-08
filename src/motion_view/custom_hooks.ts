@@ -35,7 +35,7 @@ const useReanimatedStyles = (
 						opacityProps.inputArray,
 						opacityProps.outputArray,
 					),
-			}
+			  }
 			: {};
 	}, [opacityProps, interpolationConfig]);
 
