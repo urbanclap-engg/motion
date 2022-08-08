@@ -2,7 +2,7 @@
   "author": "Gaurav verma <gauravverma@urbancompany.com>",
   "license": "MIT",
   "name": "@uc-engg/motion",
-  "version": "0.0.1-github-test-1",
+  "version": "0.0.1",
   "description": "In House Motion Repository",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
