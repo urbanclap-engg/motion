@@ -30,9 +30,7 @@
     "react-native-gesture-handler": "2.2.0",
     "react-native-reanimated": "2.3.1"
   },
-  "dependencies": {
-    "@uc/prettier-config": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
