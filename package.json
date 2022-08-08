@@ -2,7 +2,7 @@
   "author": "Gaurav verma <gauravverma@urbancompany.com>",
   "license": "MIT",
   "name": "@uc-engg/motion",
-  "version": "0.0.1",
+  "version": "0.0.1-github-test-1",
   "description": "In House Motion Repository",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -95,7 +95,7 @@
     "@types/react-dom": "17.0.2"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "http://modules.urbanclap.com:4873/"
   },
   "engines": {
     "node": ">=14.18.0"

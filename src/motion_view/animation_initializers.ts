@@ -37,17 +37,14 @@ const postAnimationCallback = (
 		onAnimationBreak?: () => void;
 	},
 ) => {
-	console.log(
-		runOnJS,
-		runOnJS(() => {}),
-	);
+
 	const { isFinished, hideViewPostAnimation } = booleans;
 	const { setViewHidden, onAnimationSuccess, onAnimationBreak } = callbacks;
 	if (isFinished && hideViewPostAnimation) {
 		visibilityOffset.value = 0;
-		runOnJS(setViewHidden)(true);
+		setViewHidden(true);
 	}
-	runOnJS(onAnimationComplete)(
+	onAnimationComplete(
 		isFinished,
 		onAnimationSuccess,
 		onAnimationBreak,
@@ -84,7 +81,7 @@ const SpringAnimationFn = (
 			restSpeedThreshold,
 		},
 		(isFinished) => {
-			postAnimationCallback(
+			runOnJS(postAnimationCallback)(
 				{ isFinished, hideViewPostAnimation },
 				visibilityOffset,
 				{ setViewHidden, onAnimationSuccess, onAnimationBreak },
@@ -122,7 +119,7 @@ const RepeatAnimateFn = (
 			repeatCount,
 			reverseOnRepeat,
 			(isFinished) => {
-				postAnimationCallback(
+				runOnJS(postAnimationCallback)(
 					{ isFinished, hideViewPostAnimation },
 					visibilityOffset,
 					{ setViewHidden, onAnimationSuccess, onAnimationBreak },
@@ -159,7 +156,7 @@ const animateFn = (
 				),
 			},
 			(isFinished) => {
-				postAnimationCallback(
+				runOnJS(postAnimationCallback)(
 					{ isFinished, hideViewPostAnimation },
 					visibilityOffset,
 					{ setViewHidden, onAnimationSuccess, onAnimationBreak },
