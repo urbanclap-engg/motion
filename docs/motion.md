@@ -5,6 +5,10 @@ A universal animation package, built on top of React-Native, that lets you run a
 
 check [here](http://modules.urbanclap.com:4873/#/) for latest versions.
 
+
+https://user-images.githubusercontent.com/35339165/183679932-6a5fa891-ffca-4d6f-a095-0c3ae3958a66.MP4
+
+
 ## Table of Contents
 1. [Overview]()
 2. [Installation]()
