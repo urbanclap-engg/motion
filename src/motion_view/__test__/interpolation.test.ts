@@ -1,3 +1,4 @@
+import { InterpolationProps } from '../types';
 import {
 	getInterPolatedProps,
 	getInterpolationArrays,
@@ -5,49 +6,14 @@ import {
 	getOffsetProps,
 	PositionBasedAnimationModifier,
 } from '../interpolation';
-import { InterpolationProps } from '../types';
+import {
+	mockPositionAnimationModifierProps,
+	mockParsedMotionProps,
+} from '../mocks';
 
 beforeEach(() => {
 	jest.resetAllMocks();
 });
-
-const mockPositionAnimationModifierProps = [
-	{
-		x: {
-			fromValue: 0,
-			toValue: 100,
-			startTiming: 0,
-			duration: 1000,
-		},
-		y: {
-			fromValue: 0,
-			toValue: 100,
-			startTiming: 1000,
-			duration: 1000,
-		},
-	},
-	{
-		y: {
-			fromValue: 100,
-			toValue: 0,
-			startTiming: 2000,
-			duration: 1000,
-		},
-	},
-];
-
-const mockParsedMotionProps = {
-	opacityProps: [
-		{
-			fromValue: 0,
-			toValue: 1,
-			startTiming: 0,
-			duration: 1000,
-		},
-	],
-	slideAnimationProps: mockPositionAnimationModifierProps,
-	scaleAnimationProps: mockPositionAnimationModifierProps,
-};
 
 describe('getOffsetProps', () => {
 	it('startTime, duration, totalDuration passed, should return startInputOffset and endInputOffset', () => {

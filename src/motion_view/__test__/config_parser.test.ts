@@ -5,12 +5,11 @@ import {
 	stringParser,
 	stringToNumberProcessor,
 } from '../config_parser';
+import { mockParseFloat } from '../mocks/config_parser.mock';
 
 beforeEach(() => {
 	jest.resetAllMocks();
 });
-
-const mockParseFloat = jest.fn();
 
 describe('config_parser', () => {
 	describe('stringParser', () => {
@@ -162,7 +161,7 @@ describe('config_parser', () => {
 			];
 			expect(result).toEqual(expectedResult);
 		});
-		it('animationConfigs passed with only y, modified animationConfig will have both x and y', () => {
+		it('animationConfigs passed with only y, modified animationConfig will have only y', () => {
 			const MOCK_ANIMATION_CONFIGS = [
 				{
 					y: {
@@ -199,7 +198,7 @@ describe('config_parser', () => {
 			expect(result).toEqual(expectedResult);
 		});
 
-		it('animationConfigs passed without x or y, modified animationConfig will have both x and y', () => {
+		it('animationConfigs passed without x or y, modified animationConfig will have neither x nor y', () => {
 			const MOCK_ANIMATION_CONFIGS = [{}];
 			const MOCK_ANIMATED_WIDTH = 1;
 			const MOCK_ANIMATED_HEIGHT = 1;

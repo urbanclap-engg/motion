@@ -37,7 +37,6 @@ const postAnimationCallback = (
 		onAnimationBreak?: () => void;
 	},
 ) => {
-
 	const { isFinished, hideViewPostAnimation } = booleans;
 	const { setViewHidden, onAnimationSuccess, onAnimationBreak } = callbacks;
 	if (isFinished && hideViewPostAnimation) {

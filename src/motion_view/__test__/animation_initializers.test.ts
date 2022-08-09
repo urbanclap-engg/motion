@@ -6,37 +6,16 @@ import {
 	RepeatAnimateFn,
 	SpringAnimationFn,
 } from '../animation_initializers';
+import {
+	mockAnimationInitProps,
+	mockEasingValues,
+	mockRepeatProps,
+	mockSpringProps,
+} from '../mocks';
 
 beforeEach(() => {
 	jest.resetAllMocks();
 });
-
-const mockAnimationInitProps = {
-	visibilityOffset: { value: 1 },
-	setViewHidden: jest.fn(),
-	onAnimationSuccess: jest.fn(),
-	onAnimationBreak: jest.fn(),
-	animationParams: { fromValue: 0, toValue: 100, duration: 1000 },
-	hideViewPostAnimation: true,
-};
-const mockEasingValues = {
-	w: 0,
-	x: 0,
-	y: 1,
-	z: 1,
-};
-const mockRepeatProps = {
-	repeatCount: 1,
-	reverseOnRepeat: true,
-};
-const mockSpringProps = {
-	damping: 1,
-	mass: 1,
-	stiffness: 1,
-	overshootClamping: true,
-	restDisplacementThreshold: 1,
-	restSpeedThreshold: 1,
-};
 
 describe('animation_initializers', () => {
 	describe('getRepeatCount', () => {

@@ -25,6 +25,8 @@ module.exports = {
 		"!src/theme/**/*.{js,jsx,ts,tsx}",
 		"!src/components/**/*.{js,jsx,ts,tsx}",
 		"!src/Typography/**/*.{js,jsx,ts,tsx}",
+		"!src/**/index.{js,ts}",
+		"!src/**/types.{js,ts}",
 	],
 	setupFilesAfterEnv: ['@testing-library/jest-native/extend-expect'],
 	coverageProvider: "v8"

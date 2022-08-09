@@ -5,43 +5,20 @@ import {
 	DEFAULT_SPRING_PROPS,
 } from '../constants';
 import { AnimationStrategy } from '../enums';
+import {
+	mockAnimationInitProps,
+	mockAnimationBasedProps,
+	mockAnimateFunction,
+	mockSpringAnimation,
+	mockRepeatAnimation,
+	mockEasingValues,
+	mockRepeatProps,
+	mockSpringProps,
+} from '../mocks';
 
-const mockAnimationInitProps = {
-	visibilityOffset: { value: 1 },
-	setViewHidden: jest.fn(),
-	onAnimationSuccess: jest.fn(),
-	onAnimationBreak: jest.fn(),
-	animationParams: { toValue: 1, duration: 1000 },
-	hideViewPostAnimation: true,
-};
-const mockEasingValues = {
-	w: 0,
-	x: 0,
-	y: 1,
-	z: 1,
-};
-const mockRepeatProps = {
-	repeatCount: 1,
-	loop: false,
-	reverseOnRepeat: false,
-};
-const mockSpringProps = {
-	damping: 1,
-	mass: 1,
-	stiffness: 1,
-	overshootClamping: true,
-	restDisplacementThreshold: 1,
-	restSpeedThreshold: 1,
-};
-const mockAnimationBasedProps = {
-	easingValues: mockEasingValues,
-	repeatProps: mockRepeatProps,
-	springProps: mockSpringProps,
-};
-
-const mockRepeatAnimation = jest.fn().mockName('RepeatAnimateFn');
-const mockSpringAnimation = jest.fn().mockName('SpringAnimateFn');
-const mockAnimateFunction = jest.fn().mockName('animateFn');
+beforeEach(() => {
+	jest.resetAllMocks();
+});
 
 describe('triggerAnimation', () => {
 	it('animation strategy passed as regular', () => {

@@ -30,11 +30,11 @@ const useReanimatedStyles = (
 	const opacityStyle = useAnimatedStyle(() => {
 		return opacityProps
 			? {
-				opacity: getInterpolation(
-					animationOffset.value,
-					opacityProps.inputArray,
-					opacityProps.outputArray,
-				),
+					opacity: getInterpolation(
+						animationOffset.value,
+						opacityProps.inputArray,
+						opacityProps.outputArray,
+					),
 			}
 			: {};
 	}, [opacityProps, interpolationConfig]);

@@ -1,25 +1,14 @@
 import { useReanimatedStyles, useVisibilityStyle } from '../custom_hooks';
 import { getInterpolation } from '../interpolation';
+import {
+	mockVisibilityOffset,
+	mockAnimationOffset,
+	mockInterpolationConfig,
+} from '../mocks';
 
 beforeEach(() => {
 	jest.resetAllMocks();
 });
-
-const mockVisibilityOffset = { value: 1 };
-const mockAnimationOffset = { value: 1 };
-const mockInterPolationProps = {
-	inputArray: [0, 1],
-	outputArray: [0, 1],
-};
-const mockInterpolationConfig = {
-	value: {
-		opacityProps: mockInterPolationProps,
-		slideXAnimationProps: mockInterPolationProps,
-		slideYAnimationProps: mockInterPolationProps,
-		scaleXAnimationProps: mockInterPolationProps,
-		scaleYAnimationProps: mockInterPolationProps,
-	},
-};
 
 describe('custom_hooks', () => {
 	it('visibilityOffset, visibilityOffset passed to useAnimatedStyle', () => {

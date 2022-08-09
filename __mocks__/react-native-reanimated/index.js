@@ -1,46 +1,29 @@
+const Reanimated = require('react-native-reanimated/mock');
 const withSpring = 
     jest.fn()
     .mockName('withSpring')
-    .mockImplementation(
-        (toValue, _, cb) => {
-        cb && cb(true);
-        return toValue;
-        });
+    .mockImplementation(Reanimated.withSpring());
 
 const withRepeat = 
     jest.fn()
     .mockName('withRepeat')
-    .mockImplementation(
-        (toValue, _, cb) => {
-            console.log('withRepeat==========', toValue, '++++',cb);
-            cb && cb(true);
-            return toValue;
-        });
+    .mockImplementation(Reanimated.withRepeat());
 
 const withDelay = 
     jest.fn()
     .mockName('withDelay')
-    .mockImplementation(
-        (toValue, _, cb) => {
-        cb && cb(true);
-        return toValue;
-        });
+    .mockImplementation(Reanimated.withDelay());
 
 const withTiming = 
     jest.fn()
     .mockName('withTiming')
-    .mockImplementation(
-        (toValue, _, cb) => {
-        cb && cb(true);
-        console.log('withTiming==========|||||||||||', toValue);
-        return toValue;
-        });
+    .mockImplementation(Reanimated.withTiming());
 
 const interpolate = 
     jest.fn()
     .mockName('interpolate')
     .mockImplementation(
-        (input, output, _) => {console.log('interpolation', input, output, _)}
+        (input, output, _) => {}
     );
 
 const ID =
@@ -66,25 +49,12 @@ const Easing= {
     inOut: ID,
     };
 
-const runOnJS = (fn) => fn;
-
-const IMMEDIATE_CB_INVOCATION = (cb) => cb();
-const useAnimatedStyle = IMMEDIATE_CB_INVOCATION;
-const useAnimatedProps = IMMEDIATE_CB_INVOCATION;
-
-const useSharedValue = (v) => ({ value: v });
-const useAnimatedReaction = () => {};
-
-export {
+module.exports = {
+    ...Reanimated,
     withSpring,
     withRepeat,
     withDelay,
     withTiming,
-    runOnJS,
     Easing,
     interpolate,
-    useAnimatedStyle,
-    useAnimatedProps,
-    useSharedValue,
-    useAnimatedReaction,
 };
