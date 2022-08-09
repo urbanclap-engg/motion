@@ -1,6 +1,5 @@
-# Overview
-## Welcome to motion
-`Motion` is the universal animation package for React Native.
+# Welcome to motion
+`Motion` is the universal animation package, built on top of React-Native, that lets you run animation through JSON.
 ```
 <Motion.View {...motionConfig}>
     {children}
