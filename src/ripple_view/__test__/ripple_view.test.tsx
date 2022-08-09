@@ -7,7 +7,7 @@ beforeEach(() => {
 	jest.resetAllMocks();
 });
 
-describe('motion_view', () => {
+describe('ripple_view', () => {
 	it('should render', () => {
 		const { getByTestId, toJSON } = render(
 			<Ripple>

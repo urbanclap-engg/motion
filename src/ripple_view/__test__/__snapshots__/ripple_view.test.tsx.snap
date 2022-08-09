@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`motion_view should render 1`] = `
+exports[`ripple_view should render 1`] = `
 <View
   isForced={true}
 >
