@@ -4,7 +4,7 @@ import {
 	mockVisibilityOffset,
 	mockAnimationOffset,
 	mockInterpolationConfig,
-} from '../mocks';
+} from './mocks';
 
 beforeEach(() => {
 	jest.resetAllMocks();

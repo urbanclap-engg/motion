@@ -5,7 +5,7 @@ import {
 	stringParser,
 	stringToNumberProcessor,
 } from '../config_parser';
-import { mockParseFloat } from '../mocks/config_parser.mock';
+import { mockParseFloat } from './mocks/config_parser.mock';
 
 beforeEach(() => {
 	jest.resetAllMocks();

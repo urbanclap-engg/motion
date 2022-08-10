@@ -2,14 +2,13 @@
   "author": "Gaurav verma <gauravverma@urbancompany.com>",
   "license": "MIT",
   "name": "@uc-engg/motion",
-  "version": "0.0.1",
+  "version": "0.0.1-1",
   "description": "A universal animation package, built on top of React-Native, that lets you run animation through JSON.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/urbanclap-engg/motion",
-    "directory": "motion"
+    "url": "git+https://github.com/urbanclap-engg/motion"
   },
   "directories": {
     "lib": "lib"
@@ -33,7 +32,6 @@
     "react-native-gesture-handler": "2.2.0",
     "react-native-reanimated": "2.3.1"
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
@@ -93,9 +91,6 @@
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.2"
   },
-  "setupFiles": [
-    "./jest-setup.js"
-  ],
   "engines": {
     "node": ">=14.18.0"
   },
