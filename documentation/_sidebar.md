@@ -5,4 +5,5 @@
 * [Motion Types](docs/types.md)
 * [Constraints](docs/constraints.md)
 * [Interactions](docs/interactions.md)
+* [Contributing to Motion](docs/contributing.md)
 * [Examples](docs/examples.md)

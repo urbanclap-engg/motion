@@ -21,7 +21,7 @@ h4[id^="method-"] code::before {
 
 h4[id^="method-"] + blockquote {
   margin: 0;
-  border-left-color: #e96900;
+  border-left-color: #C5B4F5;
   border-left: none;
   /* font-style: italic; */
   padding: 0;

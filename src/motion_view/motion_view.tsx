@@ -97,7 +97,7 @@ const MotionView: React.FunctionComponent<BaseMotionProps> = ({
 		if (startAnimation) {
 			if (visibilityOffset.value !== 1) {
 				visibilityOffset.value = withTiming(1, {
-					duration: opacityProps ? opacityProps[0].duration : 0,
+					duration: opacityProps && opacityProps[0].toValue > opacityProps[0].fromValue ? opacityProps[0].duration : 0,
 				});
 			}
 			const animationInitProps: AnimationInitProps = {

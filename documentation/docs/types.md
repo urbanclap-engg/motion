@@ -85,8 +85,8 @@ This is the type of the config that will be expected by user for driving the ani
 8. `animationBasedProps:`  expects props for animation on the basis of strategy you have selected.
 9. `onAnimationSuccess:` a callback to configure what will happen when an animation completes.
 10. `onAnimationBreak:` a callback to configure what will happen when an animation breaks in middle.
-```
 
+```
 type AnimationStylingProps = {
 	opacityProps?: CommonAnimationProps[];
 	slideAnimationProps?: PositionBasedAnimationProps[];
@@ -96,6 +96,7 @@ type AnimationStylingProps = {
 	hideViewPostAnimation?: boolean;
 };
 ```
+<br/>
 ```
 type BaseMotionProps = AnimationStylingProps & {
     animationStrategy?: AnimationStrategy;
