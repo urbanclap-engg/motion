@@ -1,11 +1,10 @@
 const onAnimationComplete = (
 	isFinished?: boolean,
-	onAnimationSuccess?: any,
-	onAnimationBreak?: any,
+	onAnimationSuccess?: Function,
+	onAnimationBreak?: Function,
 ) => {
-	if (isFinished) {
-		if (onAnimationSuccess) onAnimationSuccess();
-	} else if (onAnimationBreak) onAnimationBreak();
+	if (isFinished && onAnimationSuccess) onAnimationSuccess();
+	else if (!isFinished && onAnimationBreak) onAnimationBreak();
 };
 
 export { onAnimationComplete };

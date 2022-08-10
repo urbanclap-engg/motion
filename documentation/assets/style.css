@@ -1,0 +1,41 @@
+table th { text-align: left; }
+
+
+.sidebar h1 {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+h3 code { font-size: inherit !important; }
+h4 code { font-size: inherit !important; color: unset; }
+
+h4[id^="method-"] {
+  margin-top: 2em;
+  margin-left: -.3em;
+  margin-bottom: -.6em;
+}
+h4[id^="method-"] code::before {
+  display: inline-block;
+  content: '⚙️';
+  padding-right: .3em;
+}
+
+h4[id^="method-"] + blockquote {
+  margin: 0;
+  border-left-color: #C5B4F5;
+  border-left: none;
+  /* font-style: italic; */
+  padding: 0;
+}
+:root {
+  --theme-color: #572AC8;
+  --theme-color-dark: #572AC8;
+
+  font-family: 'roboto';
+}
+h4[id^="method-"] a code {
+  /* color: unset; */
+  color: #572AC8;
+}
+.markdown-section p.tip {
+  margin: 1em 1em
+}

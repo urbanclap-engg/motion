@@ -7,7 +7,7 @@ import Animated, {
 	withTiming,
 } from 'react-native-reanimated';
 import { getParsedConfig } from './config_parser';
-import { useVisibilityStyle, useReanimatedStyles } from './custom_hook';
+import { useVisibilityStyle, useReanimatedStyles } from './custom_hooks';
 import {
 	DEFAULT_DELAY,
 	DEFAULT_EASING_VALUES,
@@ -28,8 +28,13 @@ import {
 	ParsedBaseMotionProps,
 } from './types';
 import { getAnimationParams } from './animation_params';
-import { triggerAnimation } from './animation_initializers';
+import {
+	animateFn,
+	RepeatAnimateFn,
+	SpringAnimationFn,
+} from './animation_initializers';
 import { AnimationStrategy } from './enums';
+import { triggerAnimation } from './animation_trigger';
 
 const MotionView: React.FunctionComponent<BaseMotionProps> = ({
 	animationStrategy = AnimationStrategy.REGULAR,
@@ -92,7 +97,7 @@ const MotionView: React.FunctionComponent<BaseMotionProps> = ({
 		if (startAnimation) {
 			if (visibilityOffset.value !== 1) {
 				visibilityOffset.value = withTiming(1, {
-					duration: opacityProps ? opacityProps[0].duration : 0,
+					duration: opacityProps && opacityProps[0].toValue > opacityProps[0].fromValue ? opacityProps[0].duration : 0,
 				});
 			}
 			const animationInitProps: AnimationInitProps = {
@@ -113,6 +118,9 @@ const MotionView: React.FunctionComponent<BaseMotionProps> = ({
 				animationStrategy,
 				animationInitProps,
 				_animationBasedProps,
+				animateFn,
+				SpringAnimationFn,
+				RepeatAnimateFn,
 			);
 		}
 	}, [startAnimation]);
@@ -126,6 +134,7 @@ const MotionView: React.FunctionComponent<BaseMotionProps> = ({
 				slideStyle,
 				scaleStyle,
 			]}
+			testID="motion_view"
 			onLayout={
 				childrenHeight.value === 0 || childrenWidth.value === 0
 					? onLayout

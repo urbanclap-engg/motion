@@ -90,7 +90,6 @@ const getInterpolationArrays = (
 				inputArray.push(interpolationConfigItem.endInputOffset);
 				outputArray.push(interpolationConfigItem.toValue);
 			}
-			return undefined;
 		},
 	);
 
@@ -101,7 +100,7 @@ const getInterpolationArrays = (
 	};
 };
 
-const positionBasedAnimationModifier = (
+const PositionBasedAnimationModifier = (
 	animationProps: ParsedPositionBasedAnimationProps[],
 	totalDuration: number,
 	xArr: InterpolationProps[],
@@ -126,7 +125,6 @@ const positionBasedAnimationModifier = (
 					);
 					yArrItem ? yArr.push(yArrItem) : null;
 				}
-				return undefined;
 			},
 		);
 	}
@@ -153,16 +151,15 @@ const getInterPolationConfig = (
 				opacityPropsItem,
 			);
 			opacityArrItem ? opacityArr.push(opacityArrItem) : null;
-			return undefined;
 		});
 	}
-	positionBasedAnimationModifier(
+	PositionBasedAnimationModifier(
 		slideAnimationProps,
 		totalDuration,
 		slideXArr,
 		slideYArr,
 	);
-	positionBasedAnimationModifier(
+	PositionBasedAnimationModifier(
 		scaleAnimationProps,
 		totalDuration,
 		scaleXArr,
@@ -178,4 +175,10 @@ const getInterPolationConfig = (
 	};
 };
 
-export { getOffsetProps, getInterPolatedProps, getInterPolationConfig };
+export {
+	getOffsetProps,
+	getInterpolationArrays,
+	getInterPolatedProps,
+	getInterPolationConfig,
+	PositionBasedAnimationModifier,
+};

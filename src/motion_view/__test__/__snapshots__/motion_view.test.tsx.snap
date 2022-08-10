@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`motion_view should render 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      undefined,
+      Object {
+        "opacity": 0,
+      },
+      Object {},
+      Object {},
+      Object {},
+    ]
+  }
+  testID="motion_view"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "red",
+        "height": 100,
+        "width": 100,
+      }
+    }
+  />
+</View>
+`;
