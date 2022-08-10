@@ -96,7 +96,7 @@ type AnimationStylingProps = {
 	hideViewPostAnimation?: boolean;
 };
 ```
-<br/>
+
 ```
 type BaseMotionProps = AnimationStylingProps & {
     animationStrategy?: AnimationStrategy;
