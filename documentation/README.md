@@ -3,4 +3,4 @@ A universal animation package, built on top of React-Native, that lets you run a
 
 <img width="700" alt="image" src="./assets/motion_logo2.gif">
 
-check [here](http://modules.urbanclap.com:4873/#/) for latest versions.
+check [here]() for latest versions.

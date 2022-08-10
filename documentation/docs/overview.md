@@ -21,7 +21,7 @@ You can check current version of motion library [here](link will be added soon) 
 ## Motivation
 `Write once, animate anywhere.`
 
-React Native, in my opinion, offers the finest mental paradigm for creating products. However, when it comes to developing a multi-platform solution at scale, Platform.OS is everywhere. This is what I call an anti-pattern.
+React Native, in my opinion, offers the finest mental paradigm for creating products. However, when it comes to developing a multi-platform solution at scale, Platform.OS is everywhere. This is what we call an anti-pattern.
 
 If you find yourself writing Platform.OS === 'web' when building UI inside of your app, something is wrong.Third-party libraries with a centralised API should handle platform discrepancies. That's what makes (the mental model behind) React Native so appealing: `write once, run anywhere`.
 
