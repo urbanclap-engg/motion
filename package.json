@@ -16,6 +16,14 @@
   "files": [
     "lib"
   ],
+  "keywords": [
+    "motion",
+    "animation",
+    "JSON",
+    "uc-engg/motion",
+    "react-native-reanimated",
+    "60fps"
+  ],
   "scripts": {
     "build": "tsc",
     "lint": "eslint \"src/**\" --cache --cache-location \"./.eslint/cache/\" -f json -o ./.eslint/output/output.json",
