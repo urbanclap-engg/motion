@@ -2,7 +2,7 @@
   "author": "Gaurav verma <gauravverma@urbancompany.com>",
   "license": "MIT",
   "name": "@uc-engg/motion",
-  "version": "0.0.1-1",
+  "version": "0.1.0",
   "description": "A universal animation package, built on top of React-Native, that lets you run animation through JSON.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -85,7 +85,7 @@
     "typescript": "4.2.4"
   },
   "publishConfig": {
-    "registry": "http://modules.urbanclap.com:4873/"
+    "registry": "https://registry.npmjs.org/"
   },
   "resolutions": {
     "@types/react": "17.0.2",
