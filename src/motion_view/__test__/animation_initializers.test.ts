@@ -11,7 +11,7 @@ import {
 	mockEasingValues,
 	mockRepeatProps,
 	mockSpringProps,
-} from '../mocks';
+} from './mocks';
 
 beforeEach(() => {
 	jest.resetAllMocks();

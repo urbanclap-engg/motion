@@ -7,7 +7,7 @@
 ```
 
 ## Current version
-You can check current version of motion library [here]() corresponding to the name `@uc-engg/motion`.
+You can check current version of motion library [here](link will be added soon) corresponding to the name `@uc-engg/motion`.
 
 ## Highlights
 * Universal: works on all platforms
@@ -27,7 +27,7 @@ If you find yourself writing Platform.OS === 'web' when building UI inside of yo
 
 We decided to create our own in-house animation library after months of experimenting with various animation solutions on the web and in native apps. Everything started to make sense with the help of Reanimated v2. What we wanted was a fast animation library that allowed us to specify different animation states using component props. Hooks aren't required. Styles should transition automatically in the same way as CSS transitions do.
 
-It should be as simple as changing the backdrop colour to add an animation. It should be as simple as plugging it in.
+It should be as simple as changing the backdrop color to add an animation. It should be as simple as plugging it in.
 
 We started by combining all of Reanimated's hooks into one component. Pass it plain-style objects, and it will take care of the rest. It has a magical sense to it, and the animations are smooth.
 

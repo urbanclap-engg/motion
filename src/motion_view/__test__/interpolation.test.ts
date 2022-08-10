@@ -9,7 +9,7 @@ import {
 import {
 	mockPositionAnimationModifierProps,
 	mockParsedMotionProps,
-} from '../mocks';
+} from './mocks';
 
 beforeEach(() => {
 	jest.resetAllMocks();

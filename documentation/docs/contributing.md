@@ -16,13 +16,13 @@ If the bug you want to work on doesn't have a related issue, open one, and attac
 
 ## New features
 
-If you want to add some enhancements over the library, open a [Feature Proposal](https://github.com/framer/motion/issues/new/choose) issue with "enhancement" label.
+If you want to add some enhancements over the library, open a [Feature Proposal](https://github.com/urbanclap-engg/motion/issues) issue with "enhancement" label.
 
 This will let us talk through your proposal API and/or implementation before you spend time on it.
 
 ## Documentation
 
-Attach the documentation related to the change in respective .md file in the [docs folder]().
+Attach the documentation related to the change in respective .md file in the [docs folder](https://github.com/urbanclap-engg/motion/tree/main/documentation/docs).
 
 ## Development
 The process of proposing a change to React Native can be summarized as follows:
@@ -30,7 +30,7 @@ The process of proposing a change to React Native can be summarized as follows:
 1. Fork the [Motion repository](https://github.com/urbanclap-engg/motion) and create your branch from main.
 2. Make the desired changes to React Native sources.
 3. If you've added code that should be tested, add tests.
-4. If you've changed APIs, update the documentation, which lives in [docs folder]().
+4. If you've changed APIs, update the documentation, which lives in [docs folder](https://github.com/urbanclap-engg/motion/tree/main/documentation/docs).
 5. Ensure the test suite passes, either locally or on CI once you opened a pull request.
 6. Make sure your code lints (for example via yarn lint --fix).
 7. Push the changes to your fork.

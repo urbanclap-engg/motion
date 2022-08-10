@@ -22,9 +22,6 @@ module.exports = {
 	collectCoverageFrom: [
 		"src/**/*.{js,jsx,ts,tsx}",
 		"!src/**/__test__/**/*.{js,jsx,ts,tsx}",
-		"!src/theme/**/*.{js,jsx,ts,tsx}",
-		"!src/components/**/*.{js,jsx,ts,tsx}",
-		"!src/Typography/**/*.{js,jsx,ts,tsx}",
 		"!src/**/index.{js,ts}",
 		"!src/**/types.{js,ts}",
 	],

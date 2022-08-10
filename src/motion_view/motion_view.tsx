@@ -134,7 +134,7 @@ const MotionView: React.FunctionComponent<BaseMotionProps> = ({
 				slideStyle,
 				scaleStyle,
 			]}
-			testID="motion_view"
+			testID={__DEV__?"motion_view":undefined}
 			onLayout={
 				childrenHeight.value === 0 || childrenWidth.value === 0
 					? onLayout

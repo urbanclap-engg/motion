@@ -95,7 +95,7 @@ const Ripple: React.FC<RippleProps> = ({
 	) : (
 		/* @ts-ignore: Ignoring presence of isForced in ViewProps */
 		<GestureHandlerRootView isForced>
-			<View testID="ripple_view" ref={aRef} style={[style, styles.dimensions]}>
+			<View testID={__DEV__?"ripple_view":undefined} ref={aRef} style={[style, styles.dimensions]}>
 				<TapGestureHandler onGestureEvent={tapGestureEvent}>
 					<Animated.View style={[{ overflow: 'hidden' }]}>
 						{children}

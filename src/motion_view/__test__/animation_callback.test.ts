@@ -1,5 +1,5 @@
 import { onAnimationComplete } from '../animation_callback';
-import { mockOnAnimationBreak, mockOnAnimationSuccess } from '../mocks';
+import { mockOnAnimationBreak, mockOnAnimationSuccess } from './mocks';
 
 beforeEach(() => {
 	jest.resetAllMocks();
