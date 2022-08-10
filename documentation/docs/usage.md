@@ -8,7 +8,7 @@ import Motion.View, Motion.Ripple from "@uc-engg/motion";
 
 `Motion.View` expects a config of type BaseMotionProps which will be required for driving animation on its children component. 
 
-read about animation configs [here](./animation_config.md)
+read about animation configs [here](../docs/animation_config.md)
 
 Use animationConfig with `Motion.View`     
 ```
