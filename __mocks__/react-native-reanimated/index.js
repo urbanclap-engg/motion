@@ -2,22 +2,22 @@ const Reanimated = require('react-native-reanimated/mock');
 const withSpring = 
     jest.fn()
     .mockName('withSpring')
-    .mockImplementation(Reanimated.withSpring());
+    .mockImplementation(Reanimated.withSpring);
 
 const withRepeat = 
     jest.fn()
     .mockName('withRepeat')
-    .mockImplementation(Reanimated.withRepeat());
+    .mockImplementation(Reanimated.withRepeat);
 
 const withDelay = 
     jest.fn()
     .mockName('withDelay')
-    .mockImplementation(Reanimated.withDelay());
+    .mockImplementation(Reanimated.withDelay);
 
 const withTiming = 
     jest.fn()
     .mockName('withTiming')
-    .mockImplementation(Reanimated.withTiming());
+    .mockImplementation(Reanimated.withTiming);
 
 const interpolate = 
     jest.fn()
