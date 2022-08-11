@@ -1,6 +1,6 @@
 ## FadeOut Animation
 <h1 align="center">
-<img width="360" alt="image" src="assets/FadeOut.gif">
+<img width="360" alt="image" src="assets/fadeOut.gif">
 </h1>
 
 `Animation Config`
