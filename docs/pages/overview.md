@@ -7,7 +7,7 @@
 ```
 
 ## Current version
-You can check current version of motion library [here](link will be added soon) corresponding to the name `@uc-engg/motion`.
+You can check current version of motion library [here](https://www.npmjs.com/package/@uc-engg/motion) corresponding to the name `@uc-engg/motion`.
 
 ## Highlights
 * Universal: works on all platforms
