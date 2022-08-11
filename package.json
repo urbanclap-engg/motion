@@ -24,6 +24,7 @@
     "react-native-reanimated",
     "60fps"
   ],
+  "homepage": "https://urbanclap-engg.github.io/motion/",
   "scripts": {
     "build": "tsc",
     "lint": "eslint \"src/**\" --cache --cache-location \"./.eslint/cache/\" -f json -o ./.eslint/output/output.json",

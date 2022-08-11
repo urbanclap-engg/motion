@@ -4,11 +4,12 @@
 ```
 import Motion.View, Motion.Ripple from "@uc-engg/motion";
 ```
-## Config
+
+### Motion.View
 
 `Motion.View` expects a config of type BaseMotionProps which will be required for driving animation on its children component. 
 
-read about animation configs [here](../docs/animation_config.md)
+read about animation configs [here](../pages/animation_config.md)
 
 Use animationConfig with `Motion.View`     
 ```
@@ -26,6 +27,8 @@ const AnimatingButton: React.FunctionComponent = () => {
 
 export {AnimatingButton}
 ```
+
+### Motion.Ripple
 
 `Motion.Ripple` can be used as an alternative to touchableOpacity wherever we want a ripple effect on touch. 
 

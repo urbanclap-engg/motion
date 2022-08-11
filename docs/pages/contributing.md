@@ -30,9 +30,9 @@ The process of proposing a change to React Native can be summarized as follows:
 1. Fork the [Motion repository](https://github.com/urbanclap-engg/motion) and create your branch from main.
 2. Make the desired changes to React Native sources.
 3. If you've added code that should be tested, add tests.
-4. If you've changed APIs, update the documentation, which lives in [docs folder](https://github.com/urbanclap-engg/motion/tree/main/documentation/docs).
+4. If you've changed APIs, update the documentation, which lives in [docs folder](https://github.com/urbanclap-engg/motion/tree/main/docs).
 5. Ensure the test suite passes, either locally or on CI once you opened a pull request.
-6. Make sure your code lints (for example via yarn lint --fix).
+6. Make sure your code lints (for example via `npm run lint --fix`).
 7. Push the changes to your fork.
 8. Create a pull request to the Motion repository.
 9. Review and address comments on your pull request.
