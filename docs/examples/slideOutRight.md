@@ -1,6 +1,6 @@
 ## SlideOutRight Animation
 <h1 align="center">
-<img width="360" alt="image" src="../../assets/slideOutRight.gif">
+<img width="360" alt="image" src="assets/slideOutRight.gif">
 </h1>
 
 `Animation Config`

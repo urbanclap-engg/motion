@@ -1,6 +1,6 @@
 ## SlideInLeft Animation
 <h1 align="center">
-<img width="360" alt="image" src="../../assets/slideInLeft.gif">
+<img width="360" alt="image" src="assets/slideInLeft.gif">
 </h1>
 
 `Animation Config`

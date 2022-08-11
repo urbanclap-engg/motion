@@ -1,6 +1,6 @@
 ## FadeIn Animation
 <h1 align="center">
-<img width="360" alt="image" src="../../assets/FadeIn.gif">
+<img width="360" alt="image" src="../assets/FadeIn.gif">
 </h1>
 
 `Animation Config`
