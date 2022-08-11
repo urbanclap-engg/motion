@@ -12,7 +12,7 @@ As, Motion expects an array of `commonAnimationProps` we can achieve sequential 
 On the other hand If we want some object to animate in sequence `(say fade in first and then slide up in sequence)`, the config will look like this, ie both the animations say opacity and slide in Y will start from 0ms and will go till 500ms while adjusting its opacity and slideX keys.
 
 <h1 align="center">
-<img width="360" alt="image" src="../docs/assets/sequential_animation.gif">
+<img width="360" alt="image" src="../assets/sequential_animation.gif">
 </h1>
 
 ```
@@ -44,7 +44,7 @@ const animationConfig: BaseMotionProps = {
 If we want some object to animate in parallel `(say fade in and slide up in parallel)`, the config will look like this, ie both the animations say opacity and slide in Y will start from o ms and will go till 500ms while adjusting its opacity and slideX keys.
 
 <h1 align="center">
-<img width="360" alt="image" src="../docs/assets/parallel_animation.gif">
+<img width="360" alt="image" src="../assets/parallel_animation.gif">
 </h1>
 
 ```
