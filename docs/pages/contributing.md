@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="../assets/contributing.gif" width="300"/>
+    <img src="./assets/contributing.gif" width="300"/>
     <br>
     Contributing to Motion
 </h1>
