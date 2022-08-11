@@ -1,5 +1,3 @@
-# Types
-
 ## CommonAnimationProps
 This is the type being used for very animation in very atomic unit in our library say, opacity.
 

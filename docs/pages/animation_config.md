@@ -78,7 +78,7 @@ const animationConfig: BaseMotionProps = {
   delay: 0,
 }
 ```
-## CustomAnimations
+## Custom Animations
 You can also create custom animations which can be made using opacity, slide or scale in the following way.
 
 ```
