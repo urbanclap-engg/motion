@@ -41,10 +41,3 @@ It may be an iPhone today.
 It could be a virtual browser operating on a cloud server tomorrow.
 
 It won't matter if we get this properly.
-
-## Disclaimer
-Because this is a new library, there may be some bugs. We use it in our app, therefore I hope that any issues will be resolved in our favour.
-
-As a result, we've made information public in order to help the community. Please keep this in mind if you find something that doesn't work, and try to address the problem before spamming the Orion-doubts channel. People expecting free work can quickly derail open source projects, which is something I wish to prevent.
-
-Please look into if a problem you're having is related to Reanimated or Motion.
