@@ -1,6 +1,6 @@
 ## SlideInUp Animation
 <h1 align="center">
-<img width="360" alt="image" src="../../assets/slideInUp.gif">
+<img width="360" alt="image" src="assets/slideInUp.gif">
 </h1>
 
 `Animation Config`

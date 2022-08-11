@@ -1,6 +1,6 @@
 ## SlideInRight Animation
 <h1 align="center">
-<img width="360" alt="image" src="../../assets/slideInRight.gif">
+<img width="360" alt="image" src="assets/slideInRight.gif">
 </h1>
 
 `Animation Config`

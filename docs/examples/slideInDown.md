@@ -1,6 +1,6 @@
 ## SlideInDown Animation
 <h1 align="center">
-<img width="360" alt="image" src="../../assets/slideInDown.gif">
+<img width="360" alt="image" src="assets/slideInDown.gif">
 </h1>
 
 `Animation Config`
